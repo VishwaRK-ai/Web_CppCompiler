@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>C++ Web Compiler</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="sidebar">
+        <h3>Library Functions</h3>
+        <div class="sidebar-scroll">
+            
+            <div style="margin-top: 10px; padding-left: 12px; font-size: 0.7rem; color: #5c6370; font-weight: bold;">MATH</div>
+            
+            <div class="func-item">
+                <span class="tag math">NUM</span>
+                <div class="func-name">gcd(a, b) / lcm(a, b)</div>
+                <div class="func-desc">Greatest Common Divisor.</div>
+            </div>
+            <div class="func-item">
+                <span class="tag math">NUM</span>
+                <div class="func-name">sieve(n)</div>
+                <div class="func-desc">Get primes up to n.</div>
+            </div>
+            <div class="func-item">
+                <span class="tag math">NUM</span>
+                <div class="func-name">prime_factors(n)</div>
+                <div class="func-desc">Map of prime factors.</div>
+            </div>
+            <div class="func-item">
+                <span class="tag math">NUM</span>
+                <div class="func-name">euler_phi(n)</div>
+                <div class="func-desc">Count coprimes.</div>
+            </div>
+            <div class="func-item">
+                <span class="tag math">MOD</span>
+                <div class="func-name">nCr(n, r)</div>
+                <div class="func-desc">Combinations % MOD.</div>
+            </div>
+            <div class="func-item">
+                <span class="tag math">MOD</span>
+                <div class="func-name">mod_pow(b, e)</div>
+                <div class="func-desc">Fast (b^e) % MOD.</div>
+            </div>
+
+            <div style="margin-top: 15px; padding-left: 12px; font-size: 0.7rem; color: #5c6370; font-weight: bold;">STRINGS</div>
+
+            <div class="func-item">
+                <span class="tag str">CHK</span>
+                <div class="func-name">is_palindrome(s)</div>
+                <div class="func-desc">Check symmetry.</div>
+            </div>
+            <div class="func-item">
+                <span class="tag str">CHK</span>
+                <div class="func-name">is_subsequence(sub, s)</div>
+                <div class="func-desc">Is 'sub' inside 's'?</div>
+            </div>
+            <div class="func-item">
+                <span class="tag str">OPS</span>
+                <div class="func-name">split(s, delim)</div>
+                <div class="func-desc">"a,b" &rarr; {"a","b"}</div>
+            </div>
+            <div class="func-item">
+                <span class="tag str">OPS</span>
+                <div class="func-name">join(vec, delim)</div>
+                <div class="func-desc">{"a","b"} &rarr; "a,b"</div>
+            </div>
+            <div class="func-item">
+                <span class="tag str">OPS</span>
+                <div class="func-name">repeat(s, n)</div>
+                <div class="func-desc">"ab" * 2 &rarr; "abab"</div>
+            </div>
+            <div class="func-item">
+                <span class="tag str">OPS</span>
+                <div class="func-name">to_upper(s)</div>
+                <div class="func-desc">Convert to uppercase.</div>
+            </div>
+
+            <div style="margin-top: 15px; padding-left: 12px; font-size: 0.7rem; color: #5c6370; font-weight: bold;">GRAPHS & DATA</div>
+
+            <div class="func-item">
+                <span class="tag graph">PATH</span>
+                <div class="func-name">dijkstra(start, n, adj)</div>
+                <div class="func-desc">Shortest path vector.</div>
+            </div>
+            <div class="func-item">
+                <span class="tag graph">SET</span>
+                <div class="func-name">DSU</div>
+                <div class="func-desc">Union-Find structure.</div>
+            </div>
+            <div class="func-item">
+                <span class="tag graph">UTIL</span>
+                <div class="func-name">@INF</div>
+                <div class="func-desc">1e18 (Long Long Max).</div>
+            </div>
+            
+            <div style="height: 20px;"></div>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="page-header">
+            <div style="display: flex; align-items: center;">
+                <span class="status-dot"></span> 
+                <strong>main.cpp</strong> 
+                <span style="margin-left: 10px; color: #5c6370;">— Local Environment</span>
+            </div>
+            <div style="font-size: 0.8rem; color: #5c6370; font-family: 'JetBrains Mono';">
+                C++17 | G++ Optimized
+            </div>
+        </div>
+
+        <div class="editor-container">
+            <textarea id="codeArea" spellcheck="false" placeholder="// Start coding here...">
+int main() {
+    //Start coding from here!!
+    cout << "Haloooo!!" << endl;
+    return 0;
+}</textarea>
+        </div>
+        
+        <div class="controls">
+            <button id="runBtn" onclick="runCode()">Run Code </button>
+            <div style="margin-left: auto; font-size: 0.8rem; color: #5c6370;">Ready</div>
+        </div>
+        
+        <div class="output-box" id="output">// Terminal output will appear here...</div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
