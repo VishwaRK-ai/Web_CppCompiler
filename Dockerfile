@@ -1,4 +1,4 @@
-# 1. Use a lightweight Python+Linux base image
+# 1. Use ython+Linux base image
 FROM python:3.10-slim
 
 # 2. Install the C++ Compiler (g++)
